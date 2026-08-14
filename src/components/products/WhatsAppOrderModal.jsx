@@ -105,7 +105,7 @@ ${fulfillment === "Delivery" ? `📍 *Delivery Address:* ${address.trim()}` : ""
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -197,7 +197,7 @@ ${fulfillment === "Delivery" ? `📍 *Delivery Address:* ${address.trim()}` : ""
                       placeholder="e.g. Harvinder Singh"
                       value={customerName}
                       onChange={(e) => setCustomerName(e.target.value)}
-                      className="w-full bg-gray-50 dark:bg-[#141b2d] border border-gray-200 dark:border-gray-800 rounded-lg py-2.5 px-4 text-sm text-gray-800 dark:text-white focus:outline-none focus:border-primary dark:focus:border-gold placeholder-gray-400 dark:placeholder-gray-650"
+                      className="w-full bg-gray-50 dark:bg-[#141b2d] border border-gray-200 dark:border-gray-800 rounded-lg py-2.5 px-4 text-base md:text-sm text-gray-800 dark:text-white focus:outline-none focus:border-primary dark:focus:border-gold placeholder-gray-400 dark:placeholder-gray-650"
                     />
                   </div>
 
@@ -249,7 +249,7 @@ ${fulfillment === "Delivery" ? `📍 *Delivery Address:* ${address.trim()}` : ""
                         placeholder="Enter full street, sector, city, and pincode..."
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
-                        className="w-full bg-gray-50 dark:bg-[#141b2d] border border-gray-200 dark:border-gray-800 rounded-lg py-2 px-4 text-sm text-gray-800 dark:text-white focus:outline-none focus:border-primary dark:focus:border-gold placeholder-gray-400 dark:placeholder-gray-650 resize-none"
+                        className="w-full bg-gray-50 dark:bg-[#141b2d] border border-gray-200 dark:border-gray-800 rounded-lg py-2 px-4 text-base md:text-sm text-gray-800 dark:text-white focus:outline-none focus:border-primary dark:focus:border-gold placeholder-gray-400 dark:placeholder-gray-650 resize-none"
                       />
                     </div>
                   )}
@@ -265,7 +265,7 @@ ${fulfillment === "Delivery" ? `📍 *Delivery Address:* ${address.trim()}` : ""
                         placeholder="e.g. OPTICVIP"
                         value={promoCode}
                         onChange={(e) => setPromoCode(e.target.value)}
-                        className="flex-grow bg-gray-50 dark:bg-[#141b2d] border border-gray-200 dark:border-gray-800 rounded-lg py-2.5 px-4 text-sm text-gray-800 dark:text-white focus:outline-none focus:border-primary dark:focus:border-gold placeholder-gray-400 dark:placeholder-gray-655"
+                        className="flex-grow bg-gray-50 dark:bg-[#141b2d] border border-gray-200 dark:border-gray-800 rounded-lg py-2.5 px-4 text-base md:text-sm text-gray-800 dark:text-white focus:outline-none focus:border-primary dark:focus:border-gold placeholder-gray-400 dark:placeholder-gray-655"
                       />
                       <button
                         type="button"
@@ -292,7 +292,7 @@ ${fulfillment === "Delivery" ? `📍 *Delivery Address:* ${address.trim()}` : ""
                       placeholder="e.g. Sph: -1.50, Cyl: -0.50, Axis: 90 / Blue cut anti-glare coating..."
                       value={prescription}
                       onChange={(e) => setPrescription(e.target.value)}
-                      className="w-full bg-gray-50 dark:bg-[#141b2d] border border-gray-200 dark:border-gray-800 rounded-lg py-2 px-4 text-sm text-gray-800 dark:text-white focus:outline-none focus:border-primary dark:focus:border-gold placeholder-gray-400 dark:placeholder-gray-650 resize-none"
+                      className="w-full bg-gray-50 dark:bg-[#141b2d] border border-gray-200 dark:border-gray-800 rounded-lg py-2 px-4 text-base md:text-sm text-gray-800 dark:text-white focus:outline-none focus:border-primary dark:focus:border-gold placeholder-gray-400 dark:placeholder-gray-650 resize-none"
                     />
                   </div>
 
