@@ -120,7 +120,7 @@ ${fulfillment === "Delivery" ? `📍 *Delivery Address:* ${address.trim()}` : ""
             initial={{ scale: 0.95, y: 20, opacity: 0 }}
             animate={{ scale: 1, y: 0, opacity: 1 }}
             exit={{ scale: 0.95, y: 20, opacity: 0 }}
-            className="relative bg-white dark:bg-[#0b0f19] border border-gray-200 dark:border-gray-800 rounded-2xl w-full max-w-4xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col z-10"
+            className="relative bg-white dark:bg-[#0b0f19] border border-gray-200 dark:border-gray-800 rounded-2xl w-full max-w-4xl shadow-2xl overflow-hidden overflow-x-hidden max-h-[90vh] flex flex-col z-10"
           >
             {/* Close Button */}
             <button
@@ -175,7 +175,7 @@ ${fulfillment === "Delivery" ? `📍 *Delivery Address:* ${address.trim()}` : ""
               </div>
 
               {/* ================= RIGHT PANEL (Secure Details Form) ================= */}
-              <div className="md:col-span-7 p-6 md:p-8 space-y-5 overflow-y-auto max-h-[85vh] md:max-h-[90vh] bg-white dark:bg-[#0c1222]">
+              <div className="md:col-span-7 p-4 md:p-8 space-y-5 overflow-y-auto overflow-x-hidden max-h-[85vh] md:max-h-[90vh] bg-white dark:bg-[#0c1222]">
                 <div className="space-y-1">
                   <h2 className="text-xl md:text-2xl font-serif font-bold text-gray-855 dark:text-white">
                     Secure Delivery Details
@@ -206,7 +206,7 @@ ${fulfillment === "Delivery" ? `📍 *Delivery Address:* ${address.trim()}` : ""
                     <label className="text-[10px] font-bold text-gray-555 dark:text-gray-400 uppercase tracking-widest block">
                       Delivery Option *
                     </label>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {/* Home Delivery Card */}
                       <button
                         type="button"
@@ -270,7 +270,7 @@ ${fulfillment === "Delivery" ? `📍 *Delivery Address:* ${address.trim()}` : ""
                       <button
                         type="button"
                         onClick={handleApplyPromo}
-                        className="bg-[#1d4ed8] hover:bg-[#2563eb] text-white font-bold px-6 rounded-lg text-xs uppercase tracking-wider transition-all"
+                        className="bg-[#1d4ed8] hover:bg-[#2563eb] text-white font-bold px-4 sm:px-6 rounded-lg text-xs uppercase tracking-wider transition-all"
                       >
                         Apply
                       </button>
