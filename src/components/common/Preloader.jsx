@@ -8,7 +8,7 @@ const Preloader = () => {
   useEffect(() => {
     document.body.style.overflow = "hidden";
 
-    // Smooth linear progress: 100 steps of 20ms = exactly 2.0 seconds
+    // Smooth linear progress: 100 steps of 15ms = exactly 1.5 seconds
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
@@ -17,7 +17,7 @@ const Preloader = () => {
         }
         return prev + 1;
       });
-    }, 20);
+    }, 15);
 
     // Hard safety timeout: Dismiss loader after 3.0s maximum to prevent throttling lockups
     const safetyTimeout = setTimeout(() => {
