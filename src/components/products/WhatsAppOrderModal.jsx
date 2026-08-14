@@ -259,18 +259,18 @@ ${fulfillment === "Delivery" ? `📍 *Delivery Address:* ${address.trim()}` : ""
                     <label className="text-[10px] font-bold text-gray-555 dark:text-gray-400 uppercase tracking-widest block">
                       Voucher / Promo Code
                     </label>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 w-full">
                       <input
                         type="text"
                         placeholder="e.g. OPTICVIP"
                         value={promoCode}
                         onChange={(e) => setPromoCode(e.target.value)}
-                        className="flex-grow bg-gray-50 dark:bg-[#141b2d] border border-gray-200 dark:border-gray-800 rounded-lg py-2.5 px-4 text-base md:text-sm text-gray-800 dark:text-white focus:outline-none focus:border-primary dark:focus:border-gold placeholder-gray-400 dark:placeholder-gray-655"
+                        className="flex-grow min-w-0 w-full bg-gray-50 dark:bg-[#141b2d] border border-gray-200 dark:border-gray-800 rounded-lg py-2.5 px-4 text-base md:text-sm text-gray-800 dark:text-white focus:outline-none focus:border-primary dark:focus:border-gold placeholder-gray-400 dark:placeholder-gray-655"
                       />
                       <button
                         type="button"
                         onClick={handleApplyPromo}
-                        className="bg-[#1d4ed8] hover:bg-[#2563eb] text-white font-bold px-4 sm:px-6 rounded-lg text-xs uppercase tracking-wider transition-all"
+                        className="flex-shrink-0 bg-[#1d4ed8] hover:bg-[#2563eb] text-white font-bold px-4 sm:px-6 rounded-lg text-xs uppercase tracking-wider transition-all"
                       >
                         Apply
                       </button>
