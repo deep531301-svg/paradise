@@ -8,26 +8,24 @@ const Preloader = () => {
   useEffect(() => {
     document.body.style.overflow = "hidden";
 
-    // Progress counter simulation - premium speed
+    // Smooth linear progress: 100 steps of 20ms = exactly 2.0 seconds
     const interval = setInterval(() => {
       setProgress((prev) => {
-        const increment = Math.floor(Math.random() * 10) + 4;
-        const next = prev + increment;
-        if (next >= 100) {
+        if (prev >= 100) {
           clearInterval(interval);
           return 100;
         }
-        return next;
+        return prev + 1;
       });
-    }, 40);
+    }, 20);
 
-    // Hard safety timeout: Dismiss loader after 2.0s maximum to prevent throttling lockups
+    // Hard safety timeout: Dismiss loader after 3.0s maximum to prevent throttling lockups
     const safetyTimeout = setTimeout(() => {
       clearInterval(interval);
       setProgress(100);
       setLoading(false);
       document.body.style.overflow = "";
-    }, 2000);
+    }, 3000);
 
     return () => {
       clearInterval(interval);
