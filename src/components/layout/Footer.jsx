@@ -170,8 +170,8 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Paradise Optics Showroom. All Rights Reserved. Designed for Elegant Luxury.
         </span>
         <div className="flex gap-4 font-medium">
-          <Link to="/faq" className="hover:text-gold transition-colors">Privacy Policy</Link>
-          <Link to="/faq" className="hover:text-gold transition-colors">Terms of Service</Link>
+          <Link to="/privacy-policy" className="hover:text-gold transition-colors">Privacy Policy</Link>
+          <Link to="/terms-of-service" className="hover:text-gold transition-colors">Terms of Service</Link>
           <Link to="/faq" className="hover:text-gold transition-colors">Sitemap</Link>
         </div>
       </div>
