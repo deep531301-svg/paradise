@@ -3,10 +3,19 @@ import { Link } from "react-router-dom";
 import { FaInstagram, FaFacebookF, FaYoutube, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaPaperPlane, FaWhatsapp } from "react-icons/fa";
 import { CONTACT_INFO, SOCIAL_LINKS } from "../../constants";
 import { useProducts } from "../../context/ProductContext";
+import { getShowroomStatus } from "../../utils/timeHelper";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
   const { siteContent, incrementWhatsappClicks } = useProducts();
+  const [status, setStatus] = useState({ isOpen: true, message: "Open Now — Closes at 8:30 PM", shortMessage: "Showroom Open" });
+
+  React.useEffect(() => {
+    const update = () => setStatus(getShowroomStatus());
+    update();
+    const interval = setInterval(update, 30000);
+    return () => clearInterval(interval);
+  }, []);
 
   const phone = siteContent?.phone || CONTACT_INFO.phone;
   const emailVal = siteContent?.email || CONTACT_INFO.email;
@@ -43,10 +52,14 @@ const Footer = () => {
             Paradise Optics is a luxury optical retail showroom in Ludhiana. Providing professional optical consulting paired with premium designer eyewear, advanced contact lenses, and customized prescription fittings.
           </p>
           
-          {/* Green Showroom Open indicator */}
-          <div className="flex items-center gap-2 text-[10px] font-bold text-emerald-400 uppercase tracking-widest pt-2">
-            <span className="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse inline-block" />
-            <span>SHOWROOM OPEN NOW</span>
+          {/* Dynamic Showroom Open indicator */}
+          <div className={`flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest pt-2 ${
+            status.isOpen ? "text-emerald-400" : "text-rose-500"
+          }`}>
+            <span className={`w-2.5 h-2.5 rounded-full animate-pulse inline-block ${
+              status.isOpen ? "bg-emerald-500" : "bg-rose-500"
+            }`} />
+            <span>{status.message}</span>
           </div>
         </div>
 
