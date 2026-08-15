@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaClock, FaDirections, FaCalendarCheck, FaPaperPlane } from "react-icons/fa";
 import Breadcrumb from "../../components/common/Breadcrumb";
 import { CONTACT_INFO } from "../../constants";
 import { useProducts } from "../../context/ProductContext";
+import { getShowroomStatus } from "../../utils/timeHelper";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +16,14 @@ const Contact = () => {
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const { siteContent } = useProducts();
+  const [showroomStatus, setShowroomStatus] = useState({ isOpen: true, message: "Open Now" });
+
+  useEffect(() => {
+    const update = () => setShowroomStatus(getShowroomStatus());
+    update();
+    const timer = setInterval(update, 30000);
+    return () => clearInterval(timer);
+  }, []);
 
   const phone = siteContent?.phone || CONTACT_INFO.phone;
   const emailVal = siteContent?.email || CONTACT_INFO.email;
@@ -99,14 +108,31 @@ const Contact = () => {
 
               <div className="flex gap-3">
                 <FaClock className="text-primary dark:text-gold text-base mt-0.5 flex-shrink-0" />
-                <div>
-                  <span className="font-bold text-gray-850 dark:text-white block">Opening Hours</span>
-                  <div className="text-gray-600 dark:text-gray-350 leading-relaxed font-light">
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <span className="font-bold text-gray-850 dark:text-white">Opening Hours</span>
+                    <span className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider ${
+                      showroomStatus.isOpen 
+                        ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20" 
+                        : "bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20"
+                    }`}>
+                      <span className={`w-1 h-1 rounded-full animate-pulse ${
+                        showroomStatus.isOpen ? "bg-emerald-500" : "bg-rose-500"
+                      }`} />
+                      {showroomStatus.isOpen ? "Open" : "Closed"}
+                    </span>
+                  </div>
+                  <div className="text-gray-600 dark:text-gray-350 leading-relaxed font-light text-xs">
                     {CONTACT_INFO.businessHours.map((bh, i) => (
                       <span key={i} className="block">
                         {bh.days}: {bh.hours}
                       </span>
                     ))}
+                    <span className={`block font-semibold text-[10px] mt-1.5 ${
+                      showroomStatus.isOpen ? "text-emerald-600 dark:text-emerald-400" : "text-rose-500"
+                    }`}>
+                      {showroomStatus.message}
+                    </span>
                   </div>
                 </div>
               </div>
