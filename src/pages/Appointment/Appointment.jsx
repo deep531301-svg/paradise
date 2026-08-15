@@ -1,11 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { FaCalendarAlt, FaClock, FaCheckCircle, FaUser, FaPhoneAlt, FaEnvelope, FaBriefcase, FaCalendarCheck } from "react-icons/fa";
 import Breadcrumb from "../../components/common/Breadcrumb";
 import { CONTACT_INFO } from "../../constants";
+import { getShowroomStatus } from "../../utils/timeHelper";
 
 const Appointment = () => {
   const [submittedData, setSubmittedData] = useState(null);
+  const [showroomStatus, setShowroomStatus] = useState({ isOpen: true, message: "" });
+
+  useEffect(() => {
+    const update = () => setShowroomStatus(getShowroomStatus());
+    update();
+    const timer = setInterval(update, 30000);
+    return () => clearInterval(timer);
+  }, []);
 
   const {
     register,
@@ -128,7 +137,19 @@ const Appointment = () => {
               <p className="text-xs md:text-sm text-gray-500 max-w-md mx-auto leading-relaxed font-light">
                 Reserve your dedicated slot for computerized eye checkup, lens fitting consultations, or frame reviews.
               </p>
-              <div className="w-12 h-0.5 bg-gold mx-auto mt-2" />
+              <div className="flex justify-center mt-2.5 pb-1">
+                <span className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold ${
+                  showroomStatus.isOpen 
+                    ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20" 
+                    : "bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20"
+                }`}>
+                  <span className={`w-2 h-2 rounded-full ${
+                    showroomStatus.isOpen ? "bg-emerald-500 animate-pulse" : "bg-rose-500"
+                  }`} />
+                  {showroomStatus.message}
+                </span>
+              </div>
+              <div className="w-12 h-0.5 bg-gold mx-auto mt-2.5" />
             </div>
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5 text-xs md:text-sm">
