@@ -22,6 +22,8 @@ import NotFound from "./pages/NotFound/NotFound";
 import FAQ from "./pages/FAQ/FAQ";
 import Brands from "./pages/Brands/Brands";
 import AdminPanel from "./pages/Admin/AdminPanel";
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService/TermsOfService";
 
 // Scroll to Top component on route changes
 const ScrollToTop = () => {
@@ -138,6 +140,8 @@ function App() {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/brands" element={<Brands />} />
           <Route path="/admin" element={<AdminPanel />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
