@@ -63,7 +63,7 @@ const About = () => {
             <div className="relative overflow-hidden rounded-2xl border-4 border-white dark:border-gray-900 shadow-premium aspect-[4/5] bg-gray-50 dark:bg-gray-800">
               <img
                 src="/dr-kulwinder.jpeg"
-                alt="Dr. Kulwinder Singh - Founder of Paradise Optics"
+                alt="Mr. Kulwinder Singh - Founder of Paradise Optics"
                 className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -82,7 +82,7 @@ const About = () => {
                 Leadership & Vision
               </span>
               <h2 className="text-3xl md:text-4.5xl font-serif font-black text-gray-800 dark:text-white leading-tight">
-                Meet Dr. Kulwinder Singh
+                Meet Mr. Kulwinder Singh
               </h2>
               <span className="text-xs font-semibold text-gold uppercase tracking-widest block font-sans">
                 Founder & Chief Optometrist — Paradise Optics
@@ -92,7 +92,7 @@ const About = () => {
 
             <div className="space-y-4 text-xs md:text-sm text-gray-655 dark:text-gray-350 leading-relaxed font-light">
               <p>
-                With over two decades of clinical optometry and vision refraction experience, <strong>Dr. Kulwinder Singh</strong> established Paradise Optics to bring advanced eye diagnosis and luxury European eyewear fashion to the region.
+                With over two decades of clinical optometry and vision refraction experience, <strong>Mr. Kulwinder Singh</strong> established Paradise Optics to bring advanced eye diagnosis and luxury European eyewear fashion to the region.
               </p>
               <p>
                 He holds a Bachelor's Degree in Optometry (B.Optom) and is a certified Fellow of IACLE (International Association of Contact Lens Educators). Under his direction, the showroom has scaled to host one of the most comprehensive computerized diagnostics laboratories and premium lens-fitting systems in the country.
@@ -117,6 +117,131 @@ const About = () => {
         </div>
       </section>
 
+      {/* 1.5. Next Generation Leadership Section */}
+      <section className="py-12 border-t border-gray-150 dark:border-gray-850">
+        <div className="text-center max-w-xl mx-auto mb-10 space-y-2">
+          <span className="text-primary dark:text-gold text-xs font-bold uppercase tracking-[0.2em] block">
+            Next Generation
+          </span>
+          <h2 className="text-2xl md:text-3.5xl font-serif font-bold text-gray-800 dark:text-white">
+            Meet the Executive Team
+          </h2>
+          <p className="text-xs text-gray-500 max-w-md mx-auto leading-relaxed font-light">
+            Bringing academic rigor and modern luxury fashion curation to Paradise Optics' established clinical heritage.
+          </p>
+          <div className="w-16 h-0.5 bg-gold mx-auto mt-2" />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {/* Card 1: Dr. Amanpreet Singh Kuckreja */}
+          <div className="bg-gradient-to-b from-white to-gray-50/30 dark:from-gray-900 dark:to-gray-950/80 border border-gray-150 dark:border-gray-850 rounded-3xl overflow-hidden shadow-premium hover:shadow-premium-hover transition-all duration-500 hover:border-gray-300 dark:hover:border-gray-700 flex flex-col h-full">
+            {/* Image Section */}
+            <div className="w-full aspect-[16/10] sm:aspect-[16/9] overflow-hidden bg-gray-105 dark:bg-gray-955 relative border-b border-gray-150 dark:border-gray-855">
+              <img
+                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop"
+                alt="Dr. Amanpreet Singh Kuckreja - Clinical Optometrist"
+                className="w-full h-full object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-950/60 via-gray-950/20 to-transparent" />
+              
+              {/* Floating Degree Badge */}
+              <div className="absolute bottom-3 left-3.5 bg-primary/95 dark:bg-gold/90 backdrop-blur-sm text-white dark:text-gray-950 text-[9px] font-bold uppercase tracking-widest px-2.5 py-1.5 rounded-lg shadow-lg border border-white/10 dark:border-black/5">
+                Clinical Refractionist
+              </div>
+            </div>
+            
+            {/* Cartier Red / Gold Horizontal Accent Line */}
+            <div className="h-[2.5px] bg-gradient-to-r from-primary via-gold to-primary" />
+
+            {/* Content Section */}
+            <div className="p-6 space-y-4 md:space-y-5 flex-grow flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="space-y-1">
+                  <span className="text-[9px] font-bold text-gold uppercase tracking-[0.25em] block">
+                    Chief Refractionist
+                  </span>
+                  <h3 className="font-serif text-xl md:text-[22px] font-black text-gray-900 dark:text-white leading-tight">
+                    Dr. Amanpreet Singh Kuckreja
+                  </h3>
+                  <p className="text-[10px] font-medium text-gray-400 dark:text-gray-500 uppercase tracking-wider">
+                    Master of Optometry (M.Optom)
+                  </p>
+                </div>
+                
+                <p className="text-xs md:text-sm text-gray-650 dark:text-gray-350 leading-relaxed font-light">
+                  Dr. Amanpreet directs our computerized refraction suites. He brings advanced clinical vision metrics, pediatric vision checks, and digital lens adaptation therapies from academic research straight to the Ludhiana showroom.
+                </p>
+              </div>
+
+              {/* Technical Specialties Grid */}
+              <div className="pt-4 border-t border-gray-150 dark:border-gray-850/80 grid grid-cols-2 gap-4">
+                <div className="space-y-1">
+                  <span className="text-[9px] font-bold text-gray-400 dark:text-gray-400 uppercase tracking-widest block">Clinical Focus</span>
+                  <span className="text-xs font-semibold text-gray-800 dark:text-gray-200">Dry Eye & Refraction</span>
+                </div>
+                <div className="space-y-1">
+                  <span className="text-[9px] font-bold text-gray-400 dark:text-gray-400 uppercase tracking-widest block">Lab Supervised</span>
+                  <span className="text-xs font-semibold text-gray-800 dark:text-gray-200">PD Centration Suite</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2: Evneet Kaur */}
+          <div className="bg-gradient-to-b from-white to-gray-50/30 dark:from-gray-900 dark:to-gray-950/80 border border-gray-150 dark:border-gray-850 rounded-3xl overflow-hidden shadow-premium hover:shadow-premium-hover transition-all duration-500 hover:border-gray-300 dark:hover:border-gray-700 flex flex-col h-full">
+            {/* Image Section */}
+            <div className="w-full aspect-[16/10] sm:aspect-[16/9] overflow-hidden bg-gray-105 dark:bg-gray-955 relative border-b border-gray-150 dark:border-gray-850">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
+                alt="Evneet Kaur - Optometrist & Contact Lens Specialist"
+                className="w-full h-full object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-950/60 via-gray-950/20 to-transparent" />
+              
+              {/* Floating Degree Badge */}
+              <div className="absolute bottom-3 left-3.5 bg-primary/95 dark:bg-gold/90 backdrop-blur-sm text-white dark:text-gray-950 text-[9px] font-bold uppercase tracking-widest px-2.5 py-1.5 rounded-lg shadow-lg border border-white/10 dark:border-black/5">
+                Sankara Nethralaya Alumna
+              </div>
+            </div>
+
+            {/* Divider Accent */}
+            <div className="h-[2.5px] bg-gradient-to-r from-primary via-gold to-primary" />
+
+            {/* Content Section */}
+            <div className="p-6 space-y-4 md:space-y-5 flex-grow flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="space-y-1">
+                  <span className="text-[9px] font-bold text-gold uppercase tracking-[0.25em] block">
+                    Contact Lens Fellow
+                  </span>
+                  <h3 className="font-serif text-xl md:text-[22px] font-black text-gray-900 dark:text-white leading-tight">
+                    Evneet Kaur
+                  </h3>
+                  <p className="text-[10px] font-medium text-gray-400 dark:text-gray-555 uppercase tracking-wider">
+                    Sankara Nethralaya (Chennai) Certified
+                  </p>
+                </div>
+                
+                <p className="text-xs md:text-sm text-gray-655 dark:text-gray-350 leading-relaxed font-light">
+                  Evneet leads our specialized contact lens fitting clinic. Trained at Chennai’s world-renowned Sankara Nethralaya, she handles advanced scleral lenses, toric adjustments, and complex ocular refraction.
+                </p>
+              </div>
+
+              {/* Technical Specialties Grid */}
+              <div className="pt-6 border-t border-gray-150 dark:border-gray-850/80 grid grid-cols-2 gap-4">
+                <div className="space-y-1">
+                  <span className="text-[9px] font-bold text-gray-400 dark:text-gray-400 uppercase tracking-widest block">Clinical Focus</span>
+                  <span className="text-xs font-semibold text-gray-800 dark:text-gray-200">Specialty Scleral Lenses</span>
+                </div>
+                <div className="space-y-1">
+                  <span className="text-[9px] font-bold text-gray-400 dark:text-gray-400 uppercase tracking-widest block">Fellowship</span>
+                  <span className="text-xs font-semibold text-gray-800 dark:text-gray-200">Chennai Eye Institute</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 2. Heritage Introduction */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center py-16 border-t border-gray-150 dark:border-gray-850">
         <div className="lg:col-span-7 space-y-5">
@@ -131,7 +256,7 @@ const About = () => {
             Founded with a vision to redefine eyecare, **Paradise Optics** has grown from a local boutique to a leading premium optical showroom. Located at DMC Road, Ludhiana, we represent the absolute convergence of visual precision and high-street fashion.
           </p>
           <p className="text-xs md:text-sm text-gray-655 dark:text-gray-300 leading-relaxed font-light">
-            Our showroom showcases exclusive eyewear selections from elite global houses like Ray-Ban, Oakley, Carrera, and Vogue. Backed by fully computerized vision laboratories, our licensed specialists perform comprehensive diagnostics to protect and enhance your sight.
+            Our showroom showcases exclusive eyewear selections from elite global houses like Ray-Ban, Oakley, Carrera, and Prada. Backed by fully computerized vision laboratories, our licensed specialists perform comprehensive diagnostics to protect and enhance your sight.
           </p>
           <div className="pt-2">
             <Link
