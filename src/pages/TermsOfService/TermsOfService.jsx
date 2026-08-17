@@ -25,7 +25,7 @@ const TermsOfService = () => {
             1. Professional Eyecare Services
           </h2>
           <p className="text-sm leading-relaxed font-light">
-            All clinical eye test evaluations, contact lens fitting consultations, and vision refraction assessments scheduled via our appointment portal are conducted on-site in our Ludhiana showroom under the direct supervision of licensed optometrists led by **Dr. Kulwinder Singh**. 
+            All clinical eye test evaluations, contact lens fitting consultations, and vision refraction assessments scheduled via our appointment portal are conducted on-site in our Ludhiana showroom under the direct supervision of licensed optometrists led by **Mr. Kulwinder Singh**. 
           </p>
           <p className="text-sm leading-relaxed font-light">
             Online listings and guides are for promotional information only and do not replace professional medical eye diagnostics.
@@ -37,7 +37,7 @@ const TermsOfService = () => {
             2. Orders & WhatsApp Checkout
           </h2>
           <p className="text-sm leading-relaxed font-light">
-            We display a high-fidelity digital catalog of global eyewear brands (Ray-Ban, Oakley, Carrera, Vogue). 
+            We display a high-fidelity digital catalog of global eyewear brands (Ray-Ban, Oakley, Carrera, Prada). 
           </p>
           <ul className="list-disc list-inside text-sm space-y-1.5 pl-2 font-light">
             <li><strong>Checkout finalization</strong>: Tapping "Order via WhatsApp" compiles your specs and connects you to our showroom support desk. No financial transactions are processed directly on this website.</li>
