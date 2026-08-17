@@ -24,6 +24,8 @@ import Brands from "./pages/Brands/Brands";
 import AdminPanel from "./pages/Admin/AdminPanel";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService/TermsOfService";
+import Login from "./pages/Auth/Login";
+import AuthRoute from "./components/common/AuthRoute";
 
 // Scroll to Top component on route changes
 const ScrollToTop = () => {
@@ -78,7 +80,7 @@ const BackToTopButton = () => {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-24 right-6 bg-primary hover:bg-gold dark:bg-gold dark:hover:bg-yellow-500 text-white dark:text-gray-900 w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 z-40 focus:outline-none"
+      className="fixed bottom-24 md:bottom-40 right-6 bg-primary hover:bg-gold dark:bg-gold dark:hover:bg-yellow-500 text-white dark:text-gray-900 w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 z-40 focus:outline-none"
       aria-label="Back to top"
     >
       <svg
@@ -139,7 +141,15 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/brands" element={<Brands />} />
-          <Route path="/admin" element={<AdminPanel />} />
+          <Route path="/login" element={<Login />} />
+          <Route
+            path="/admin"
+            element={
+              <AuthRoute>
+                <AdminPanel />
+              </AuthRoute>
+            }
+          />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="*" element={<NotFound />} />

@@ -5,6 +5,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { ThemeProvider } from "./context/ThemeContext";
 import { WishlistProvider } from "./context/WishlistContext";
 import { ProductProvider } from "./context/ProductContext";
+import { AuthProvider } from "./context/AuthContext";
 import App from "./App.jsx";
 import "./index.css";
 
@@ -15,7 +16,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <ThemeProvider>
           <WishlistProvider>
             <ProductProvider>
-              <App />
+              <AuthProvider>
+                <App />
+              </AuthProvider>
             </ProductProvider>
           </WishlistProvider>
         </ThemeProvider>
