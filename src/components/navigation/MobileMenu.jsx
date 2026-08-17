@@ -5,12 +5,14 @@ import { FaTimes, FaHeart, FaMoon, FaSun, FaChevronRight } from "react-icons/fa"
 import { useTheme } from "../../context/ThemeContext";
 import { useWishlist } from "../../context/WishlistContext";
 import { useProducts } from "../../context/ProductContext";
+import { useAuth } from "../../context/AuthContext";
 import { CONTACT_INFO } from "../../constants";
 
 const MobileMenu = ({ isOpen, onClose, onOpenWishlist }) => {
   const { theme, toggleTheme } = useTheme();
   const { wishlistCount } = useWishlist();
   const { siteContent } = useProducts();
+  const { user, signOut } = useAuth();
   const navigate = useNavigate();
 
   // Prevent background scroll when menu is open
@@ -141,7 +143,38 @@ const MobileMenu = ({ isOpen, onClose, onOpenWishlist }) => {
                 </button>
               </div>
 
-
+              {/* Auth Actions on Mobile */}
+              <div className="pt-4 border-t border-gray-150/40 dark:border-gray-800/50 space-y-3">
+                {user ? (
+                  <>
+                    <Link
+                      to="/admin"
+                      onClick={handleLinkClick}
+                      className="flex w-full items-center justify-center gap-2 py-3 rounded-xl bg-gold text-gray-950 font-bold text-xs tracking-wider uppercase transition-all shadow-sm active:scale-95 text-center"
+                    >
+                      Admin Panel
+                    </Link>
+                    <button
+                      onClick={() => {
+                        signOut();
+                        onClose();
+                        window.showToast?.("Signed out successfully", "info");
+                      }}
+                      className="flex w-full items-center justify-center gap-2 py-3 rounded-xl border border-red-200 dark:border-red-950/40 text-red-500 bg-red-50/50 dark:bg-red-950/10 font-bold text-xs tracking-wider uppercase transition-all shadow-sm active:scale-95"
+                    >
+                      Sign Out
+                    </button>
+                  </>
+                ) : (
+                  <Link
+                    to="/login"
+                    onClick={handleLinkClick}
+                    className="flex w-full items-center justify-center gap-2 py-3 rounded-xl bg-primary hover:bg-gold text-white dark:bg-gold dark:text-gray-950 font-bold text-xs tracking-wider uppercase transition-all shadow-sm active:scale-95 text-center"
+                  >
+                    Sign In
+                  </Link>
+                )}
+              </div>
             </div>
           </motion.div>
         </>
