@@ -15,25 +15,116 @@ const Brands = () => {
       image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=600&auto=format&fit=crop"
     },
     {
+      name: "Burberry",
+      origin: "UK",
+      tagline: "British Heritage Luxury",
+      desc: "Iconic British styling and signature tartan check details on premium luxury frames.",
+      image: "https://images.unsplash.com/photo-1589156280159-27698a70f29e?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      name: "Michael Kors",
+      origin: "USA",
+      tagline: "Jet Set Glamour",
+      desc: "Chic, sporty, and sophisticated designs made for modern trendsetters.",
+      image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      name: "Dolce & Gabbana",
+      origin: "ITALY",
+      tagline: "Italian Passion & Style",
+      desc: "Unapologetically bold designs with extravagant details and Sicilian inspiration.",
+      image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      name: "Prada",
+      origin: "ITALY",
+      tagline: "Avant-Garde Luxury",
+      desc: "Conceptual designs combining clean minimalist shapes with bold geometric style.",
+      image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      name: "Tory Burch",
+      origin: "USA",
+      tagline: "Bohemian Classic Chic",
+      desc: "Color-rich, patterns-rich luxury eyewear detailed with the iconic Double-T logo.",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      name: "Emporio Armani",
+      origin: "ITALY",
+      tagline: "Youthful Luxury Spirit",
+      desc: "Contemporary, fashionable frames styled with the iconic eagle emblem.",
+      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      name: "Versace",
+      origin: "ITALY",
+      tagline: "Bold Ocular Mythos",
+      desc: "Opulent, glamorous statement frames decorated with the iconic gold Medusa head.",
+      image: "https://images.unsplash.com/photo-1558507652-2d9626c4e67a?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      name: "Coach",
+      origin: "USA",
+      tagline: "New York Attitude",
+      desc: "Timeless American luxury frames featuring craftsmanship and classic C-logo details.",
+      image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      name: "Marc Jacobs",
+      origin: "USA",
+      tagline: "Rebellious Fashion Spirit",
+      desc: "Eclectic, retro-chic frames that challenge rules and define modern style.",
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      name: "Tommy Hilfiger",
+      origin: "USA",
+      tagline: "Classic American Cool",
+      desc: "Preppy, sporty eyewear collections styled with red, white, and blue stripe motifs.",
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      name: "Calvin Klein",
+      origin: "USA",
+      tagline: "Minimalist Modernity",
+      desc: "Clean, fluid design aesthetics featuring sleek profiles and sophisticated tones.",
+      image: "https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      name: "Guess",
+      origin: "USA",
+      tagline: "Bold & Sexy Curation",
+      desc: "Young, glamorous, and adventurous frames that make a statement anywhere.",
+      image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      name: "Carrera",
+      origin: "AUSTRIA",
+      tagline: "Outpace the Ordinary",
+      desc: "Race-inspired active styling, sporty frames, and high-performance lenses.",
+      image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      name: "Hugo",
+      origin: "GERMANY",
+      tagline: "Individualist Style",
+      desc: "Clean-cut, progressive frames designed for those who lead instead of follow.",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      name: "Boss",
+      origin: "GERMANY",
+      tagline: "Sartorial Authority",
+      desc: "Tailored sophistication, high-end materials, and refined executive shapes.",
+      image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=600&auto=format&fit=crop"
+    },
+    {
       name: "Oakley",
       origin: "USA",
-      tagline: "Be Who You Are",
-      desc: "Experience Oakley's legendary collections including high-performance sportswear.",
+      tagline: "High Performance Engineering",
+      desc: "Sport-specialized frames featuring lightweight O-Matter frames and Prizm optics.",
       image: "https://images.unsplash.com/photo-1625591439851-468f34bc0865?q=80&w=600&auto=format&fit=crop"
-    },
-    {
-      name: "Gucci",
-      origin: "ITALY",
-      tagline: "Italian Elegance",
-      desc: "Experience Gucci's legendary collections including high-fashion luxury.",
-      image: "https://images.unsplash.com/photo-1509695507497-903c140c43b0?q=80&w=600&auto=format&fit=crop"
-    },
-    {
-      name: "Dior",
-      origin: "FRANCE",
-      tagline: "French Sophistication",
-      desc: "Experience Dior's legendary collections including haute couture & fragrances.",
-      image: "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?q=80&w=600&auto=format&fit=crop"
     }
   ];
 
