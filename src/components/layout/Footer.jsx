@@ -40,13 +40,23 @@ const Footer = () => {
         
         {/* Column 1: Logo & About Store */}
         <div className="space-y-4">
-          <Link to="/" className="inline-block">
-            <h2 className="font-serif text-2xl font-black uppercase tracking-wider text-white">
-              Paradise <span className="text-gold">Optics</span>
-            </h2>
-            <span className="block text-[9px] font-sans font-semibold text-gray-500 uppercase tracking-widest -mt-1">
-              SEE BETTER. LOOK BETTER. FEEL BETTER.
-            </span>
+          <Link to="/" className="flex items-center text-left group">
+            <img
+              src="/logo.png"
+              alt="Paradise Optics Logo"
+              className="h-10 md:h-12 w-auto object-contain mr-3 dark:brightness-110"
+            />
+            <div className="flex flex-col">
+              <span className="text-[10px] md:text-[11px] font-sans font-semibold text-gray-500 dark:text-gray-400 tracking-wide leading-none mb-1 pl-[16px] md:pl-[20px]">
+                Dr. Kuckreja's
+              </span>
+              <h2 className="font-serif text-2xl font-black uppercase tracking-wider leading-none text-white">
+                Paradise <span className="text-gold">Optics</span>
+              </h2>
+              <span className="block text-[9px] font-sans font-semibold text-gray-500 uppercase tracking-widest mt-1.5">
+                SEE BETTER. LOOK BETTER. FEEL BETTER.
+              </span>
+            </div>
           </Link>
           <p className="text-xs md:text-sm text-gray-400 leading-relaxed font-light">
             Paradise Optics is a luxury optical retail showroom in Ludhiana. Providing professional optical consulting paired with premium designer eyewear, advanced contact lenses, and customized prescription fittings.

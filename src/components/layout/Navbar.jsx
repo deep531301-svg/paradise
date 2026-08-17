@@ -4,6 +4,7 @@ import { FaHeart, FaSearch, FaMoon, FaSun, FaWhatsapp, FaBars, FaTimes, FaPhoneA
 import { useTheme } from "../../context/ThemeContext";
 import { useWishlist } from "../../context/WishlistContext";
 import { useProducts } from "../../context/ProductContext";
+import { useAuth } from "../../context/AuthContext";
 import { CONTACT_INFO } from "../../constants";
 import MobileMenu from "../navigation/MobileMenu";
 
@@ -11,6 +12,7 @@ const Navbar = ({ onOpenWishlist }) => {
   const { theme, toggleTheme } = useTheme();
   const { wishlistCount } = useWishlist();
   const { siteContent } = useProducts();
+  const { user, signOut } = useAuth();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -73,14 +75,24 @@ const Navbar = ({ onOpenWishlist }) => {
             {/* Logo */}
             <Link
               to="/"
-              className="flex flex-col text-left group"
+              className="flex items-center text-left group"
             >
-              <span className="font-serif text-xl md:text-2xl font-black uppercase tracking-widest text-primary dark:text-gold group-hover:opacity-90 transition-opacity">
-                Paradise Optics
-              </span>
-              <span className="text-[9px] md:text-[10px] font-sans font-medium text-gray-400 dark:text-gray-550 uppercase tracking-[0.25em] -mt-1">
-                See Better. Look Better.
-              </span>
+              <img
+                src="/logo.png"
+                alt="Paradise Optics Logo"
+                className="h-8 md:h-12 w-auto object-contain mr-2 md:mr-3"
+              />
+              <div className="flex flex-col">
+                <span className="text-[8px] md:text-[11px] font-sans font-semibold text-gray-600 dark:text-gray-400 tracking-wide leading-none mb-0 md:-mb-[5px] pl-[12px] md:pl-[20px]">
+                  Dr. Kuckreja's
+                </span>
+                <span className="font-serif text-[15px] sm:text-lg md:text-2xl font-black uppercase tracking-widest group-hover:opacity-90 transition-opacity leading-none">
+                  <span className="text-primary">Paradise</span> <span className="text-gold">Optics</span>
+                </span>
+                <span className="hidden sm:block text-[9px] md:text-[10px] font-sans font-medium text-gray-400 dark:text-gray-550 uppercase tracking-[0.25em] mt-1.5">
+                  See Better. Look Better.
+                </span>
+              </div>
             </Link>
 
             {/* Desktop Navigation Links */}
@@ -125,6 +137,34 @@ const Navbar = ({ onOpenWishlist }) => {
               >
                 Book Test
               </Link>
+
+              {/* Auth Actions (Desktop Only) */}
+              {user ? (
+                <div className="hidden lg:flex items-center space-x-3">
+                  <Link
+                    to="/admin"
+                    className="text-xs font-bold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-gold uppercase tracking-wider transition-colors"
+                  >
+                    Admin
+                  </Link>
+                  <button
+                    onClick={() => {
+                      signOut();
+                      window.showToast?.("Signed out successfully", "info");
+                    }}
+                    className="text-xs font-bold text-red-500 hover:text-red-700 uppercase tracking-wider transition-colors focus:outline-none"
+                  >
+                    Sign Out
+                  </button>
+                </div>
+              ) : (
+                <Link
+                  to="/login"
+                  className="hidden lg:inline-flex text-xs font-bold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-gold uppercase tracking-wider transition-colors"
+                >
+                  Sign In
+                </Link>
+              )}
 
               {/* Mobile Hamburger Menu button */}
               <button
